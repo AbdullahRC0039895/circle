@@ -36,12 +36,42 @@ namespace circle
                 Radius = 0;
             }
 
-            double area = 2 * Math.PI * Radius;
-            label1.Text = "Area =" + area;
+            double Circumference = 2 * Math.PI * Radius;
+            label1.Text = "Circumference =" + Circumference;
 
-            double circumference = Math.PI * (Radius * Radius);
-            label2.Text = "Circumference =" + circumference;
+            double area = Math.PI * (Radius * Radius);
+            label2.Text = "Area =" + area;
             
+        }
+
+        private void Btn1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(pictureBox1.Location.X - 10, pictureBox1.Location.Y);
+            textBox1.Location = new Point(textBox1.Location.X - 10, textBox1.Location.Y);
+            btn_.Location = new Point(btn_.Location.X - 10, btn_.Location.Y);
+            label3.Location = new Point(label3.Location.X - 10, label3.Location.Y);
+
+        }
+
+        private void Btn2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(pictureBox1.Location.X + 10, pictureBox1.Location.Y);
+            textBox1.Location = new Point(textBox1.Location.X + 10, textBox1.Location.Y);
+            btn_.Location = new Point(btn_.Location.X + 10, btn_.Location.Y);
+        }
+
+        private void Btn3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 10);
+            textBox1.Location = new Point(textBox1.Location.X, textBox1.Location.Y - 10);
+            btn_.Location = new Point(btn_.Location.X, btn_.Location.Y - 10);
+        }
+
+        private void Btn4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 10);
+            textBox1.Location = new Point(textBox1.Location.X, textBox1.Location.Y + 10);
+            btn_.Location = new Point(btn_.Location.X, btn_.Location.Y + 10);
         }
     }
 }
